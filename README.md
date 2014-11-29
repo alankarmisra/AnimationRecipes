@@ -1,7 +1,7 @@
 AnimationRecipes
 ================
 
-A tiny Objective-C library with simple animation recipes for iOS UIViews inspired by Animate.css. More recipes are being added and a feature to chain animations is being worked on. CocoaPod support is being added soon.
+A tiny library with simple animation recipes for iOS UIViews inspired by Animate.css. More recipes are being added and a feature to simplify chaining animations is being worked on (you can chain them even with the existing version with a slightly verbose syntax). Cocoapod installation support will be added soon (apologies for not having this in there to begin with).
 
 Demo
 ====
