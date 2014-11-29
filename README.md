@@ -22,9 +22,9 @@ Chaining Animations
 While I'm working on simpler ways to chain animations, for now you could do the following:
 
 ```Objective-C
-    [AnimationRecipes fadeInLeft:_prop completion:^(BOOL finished){
-        [AnimationRecipes wobble:_prop completion:^(BOOL finished){
-            [AnimationRecipes fadeOutRight:_prop completion:^(BOOL finished){
+    [AnimationRecipes fadeInLeft:myUIView completion:^(BOOL finished){
+        [AnimationRecipes wobble:myUIView completion:^(BOOL finished){
+            [AnimationRecipes fadeOutRight:myUIView completion:^(BOOL finished){
                 // All done!
             }];
         }];
