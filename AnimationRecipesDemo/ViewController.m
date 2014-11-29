@@ -58,6 +58,16 @@
            nil];
 }
 
+-(void)viewDidAppear:(BOOL)animated {
+    [AnimationRecipes fadeInLeft:_prop completion:^(BOOL finished){
+        [AnimationRecipes wobble:_prop completion:^(BOOL finished){
+            [AnimationRecipes fadeOutRight:_prop completion:^(BOOL finished){
+                // All done!
+            }];
+        }];
+    }];
+}
+
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
     return 1;
 }

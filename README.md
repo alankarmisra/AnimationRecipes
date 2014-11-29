@@ -11,6 +11,22 @@ How to use
 ==========
 Copy AnimationRecipes.h and AnimationRecipes.m into your project. Use one of the several AnimationRecipe functions on your UI View like so. 
 
+```Objective-C
 [AnimationRecipes flash:myUIView completion:nil];
+```
 
 You might want to turn off AutoLayout if it gets in the way. 
+
+Chaining Animations
+===================
+While I'm working on simpler ways to chain animations, for now you could do the following:
+
+```Objective-C
+    [AnimationRecipes fadeInLeft:_prop completion:^(BOOL finished){
+        [AnimationRecipes wobble:_prop completion:^(BOOL finished){
+            [AnimationRecipes fadeOutRight:_prop completion:^(BOOL finished){
+                // All done!
+            }];
+        }];
+    }];
+```
