@@ -5,7 +5,7 @@ A tiny Objective-C library with simple animation recipes for iOS UIViews inspire
 
 Demo
 ====
-Watch the [YouTube demo](http://youtu.be/SS5xsQzE88Y)
+Watch the [YouTube demo](http://youtu.be/pRgiX1MUHVo)
 
 NOTE: To view the software demo, pick any of the iPad simulators.
 
