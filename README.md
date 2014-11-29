@@ -7,6 +7,8 @@ Demo
 ====
 Watch the [YouTube demo](http://youtu.be/SS5xsQzE88Y)
 
+NOTE: To view the software demo, pick any of the iPad simulators.
+
 How to use
 ==========
 Copy AnimationRecipes.h and AnimationRecipes.m into your project. Use one of the several AnimationRecipe functions on your UI View like so. 
