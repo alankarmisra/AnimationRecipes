@@ -93,7 +93,7 @@
             _prop.transform = CGAffineTransformMakeScale(1.0, 1.0);
             _prop.frame = frame;
         });
-
+        
     }
 }
 

@@ -62,7 +62,9 @@
         view.alpha = 0;
     } completion:^(BOOL finished) {
         view.alpha = 1.0;
-        completion(finished);
+        if(completion) {
+            completion(finished);
+        }
     }];
 }
 
@@ -71,7 +73,9 @@
         view.transform = CGAffineTransformMakeScale(1.1, 1.1);
     } completion:^(BOOL finished) {
         view.transform = CGAffineTransformMakeScale(1,1);
-        completion(finished);
+        if(completion) {
+            completion(finished);
+        }
     }];
 }
 
@@ -108,7 +112,9 @@
         view.transform = CGAffineTransformMakeTranslation(30.0, 0);
     } completion:^(BOOL finished) {
         view.transform = CGAffineTransformMakeTranslation(0,0);
-        completion(finished);
+        if(completion) {
+            completion(finished);
+        }
     }];
 }
 
@@ -174,7 +180,9 @@
         }];
     } completion:^(BOOL finished) {
         [self setAnchorPoint:CGPointMake(0.5, 0.5) forView:view];
-        completion(finished);
+        if(completion) {
+            completion(finished);
+        }
     }];
 }
 
@@ -240,7 +248,9 @@
             view.transform = CGAffineTransformMakeScale(0.001, 0.001);
         } completion:^(BOOL finished) {
             view.transform = CGAffineTransformMakeScale(0, 0);
-            completion(finished);
+            if(completion) {
+                completion(finished);
+            }
         }];
     }];
 }
@@ -366,9 +376,7 @@
     view.transform = CGAffineTransformMakeScale(0.0, 0.0);
     [UIView animateWithDuration:0.5 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
         view.transform = CGAffineTransformMakeScale(1.0, 1.0);
-    } completion:^(BOOL finished) {
-        completion(finished);
-    }];
+    } completion:completion];
 }
 
 +(void)zoomInDown:(UIView *)view completion:(void (^)(BOOL finished))completion {
